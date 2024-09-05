@@ -24,8 +24,7 @@ const generateLink = (...arr) => {
   breadcrumb.innerHTML = arr
     .map(
       (item, i) =>
-        `<a class="breadcrumb__link" href="${
-          item == "home" ? "index" : item
+        `<a class="breadcrumb__link" href="${item == "home" ? "index" : item
         }.html">${item}</a> ${arr[i + 1] ? "/" : ""} `
     )
     .join("");
@@ -58,10 +57,9 @@ const renderButtons = (contentId) => {
   tab__buttons.innerHTML = data
     .map(
       (item, index) =>
-        `<button class="buttons ${
-          contentId == item.id
-            ? "active"
-            : !contentId && index == 0
+        `<button class="buttons ${contentId == item.id
+          ? "active"
+          : !contentId && index == 0
             ? "active"
             : ""
         }" onclick="renderTab(${item.id})">${item.name}</button>`
@@ -93,14 +91,14 @@ renderTab();
 
 //////////////
 
-// const about_btn = document.querySelector(".about_btn");
+let modal = document.querySelector(".myModal");
+let btn = document.querySelector(".about_btn");
 
-// const remove = () => {
-//   about_pic.classList.remove("open");
-// };
-// drower.addEventListener("click", removeDrower);
-// about_pic.addEventListener("click", removeDrower);
-
-// const about = document.querySelector(".about");
-
-
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
