@@ -93,6 +93,14 @@ renderTab();
 
 //////////////
 
-const about_btn = document.querySelector(".about_btn");
+// const about_btn = document.querySelector(".about_btn");
 
-about_btn.addEventListener("click", )
+// const remove = () => {
+//   about_pic.classList.remove("open");
+// };
+// drower.addEventListener("click", removeDrower);
+// about_pic.addEventListener("click", removeDrower);
+
+// const about = document.querySelector(".about");
+
+
